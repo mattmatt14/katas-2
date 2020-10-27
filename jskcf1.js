@@ -24,15 +24,10 @@ function add(a, b) {
     }
 
     function power(a, b) {
-       
-        let p = 0;
-        let count = 0;
-        while(count < b) {
-            p += add(a, 0)
-            count += 1;
-            p = p + a;
-        }
-       return p;
+       if (b === 0){
+           return 1;
+       }
+       return a * power(a, b - 1);
     }
 
         function factorial(a) {
@@ -49,7 +44,7 @@ function add(a, b) {
 let fact = factorial(5);
 let sum = add(4, 8);
 let mult = multiply(6, 6);
-let pow = power(8, 8);
+let pow = power(2, 8);
 
 console.log(sum)
 console.log(mult) 
